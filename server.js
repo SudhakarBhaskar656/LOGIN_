@@ -22,6 +22,10 @@ const userRoute=require('./routes/user/user.route')
 app.use('/admin',admiRoute)
 app.use('/user',userRoute)
 
+app.get('/',(req,res)=>{
+    res.send("Default Route")
+})
+
 app.listen(PORT,()=>{
     console.log(`PORT Has Been Started on ${PORT}`)
     dbconnect()
